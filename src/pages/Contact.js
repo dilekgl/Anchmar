@@ -36,15 +36,16 @@ const Contact = () => {
         <div
         className="leftSide">
           <h2>Adresimiz</h2>
-          <p>Anch Marine<br />Örnek Mah. Sahil Cad. No:123<br />İstanbul, Türkiye</p>
+          <p>Anchmar Marine<br />Datça<br />Muğla, Türkiye</p>
         <div className="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2845.8007757760897!2d29.249463811398506!3d41.01576267123004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad1eb845c64c1%3A0xd356a9a0e6ce9afc!2sYunus%20Emre%2C%20Billur%20Sk.%20No%3A9%2C%2034791%20Sancaktepe%2F%C4%B0stanbul!5e1!3m2!1str!2str!4v1749324929231!5m2!1str!2str" 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12090.690241086926!2d27.688000999999996!3d36.7336575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14be249548517575%3A0x120d358f69d57900!2zRGF0w6dhLCDEsHNrZWxlLCA0ODkwMCBEYXTDp2EvTXXEn2xh!5e1!3m2!1str!2str!4v1750328511786!5m2!1str!2str" 
         width="600" 
         height="450" 
         style={{ border: 0 }} 
         allowfullscreen="" 
         loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade"></iframe>
+     
         </div>
 
 

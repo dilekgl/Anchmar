@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <div className="home" style={{ backgroundImage: `url(${anaSayfa})` }}>
       <div className="headerContainer">
-        <h1>Anch Marine</h1>
+        <h1>Anchmar Marine</h1>
         <p>Yatlarınız için en iyisi</p>
       </div>
     </div>
