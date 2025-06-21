@@ -81,3 +81,37 @@ form button {
   font-size: 15px;
   cursor: pointer;
 }
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 oranı için */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}
+.name-row {
+  display: flex;
+  gap: 20px; /* iki input arası boşluk */
+  width: 88%; /* form input genişliği ile uyumlu */
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* iki input eşit genişlikte */
+}
+
+.name-row label {
+  margin-top: 15px;
+  color: grey;
+}

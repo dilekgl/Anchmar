@@ -23,12 +23,12 @@ const Header = () => {
   return (
     <div className={`Header ${animate ? 'fade-in' : ''}`}>
       <div className='leftSide' id={openLinks ? "open" : "close"}>
-        <img src={logo} alt="Logo" />
+        <Link to="/"><img src={logo} alt="Logo" /></Link>
         <div className="hiddenLinks">
-          <Link to="/"> Home </Link>
-          <Link to="/menu"> Menu </Link>
-          <Link to="/about"> About </Link>
-          <Link to="/contact"> Contact </Link>
+        <Link to="/">Anasayfa</Link>
+        <Link to="/hakkimizda">Hakkımızda</Link>
+        <Link to="/hizmetlerimiz">Hizmetlerimiz</Link>
+        <Link to="/iletisim">İletişim</Link>
         </div>
       </div>
       <div className='rightSide'>

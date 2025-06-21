@@ -23,34 +23,35 @@
   align-items: center;
   padding: 15px 30px;
   z-index: 999;
-  background-color: rgba(2, 34, 67, 0.4);/* Transparan beyaz */
-  backdrop-filter: blur(10px); /* Arka planı hafif bulanıklaştırır */
+  background-color: rgba(2, 34, 67, 0.10);/* Transparan beyaz */
+  backdrop-filter: blur(1px); /* Arka planı hafif bulanıklaştırır */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge */
   animation: fadeIn 0.8s ease-out;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 
 }
 .Header .leftSide{
-  flex: 50%;
+  flex: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  padding-left: 50px;
+  padding-left: 20px;
 }
 .Header .leftSide img{
-  width: 100px;
+  margin-left:0px;
+  width: 80px;
 }
 .Header .rightSide{
-  flex: 50%;
+  flex: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 }
 .Header a {
   color: white;
   text-decoration: none;
-  margin: 20px;
+  font-size: 18px;
 }
 .Header .rightSide button {
   background-color: transparent;

@@ -1,21 +1,154 @@
 .footer {
   width: 100%;
-  height: 200px;
+  height: auto;
   background-color: #8baec9;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding-top: 10px;
+  padding: 10px;
+  box-sizing: 100%;
+}
+.footerLeft, .footerCenter, .footerRight {
+  flex-basis: 50%; /* her biri yaklaşık eşit genişlikte */
+}
+
+.footerLogoContainer {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footerLogoText {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footerLogoImage {
+  width: 90px;
+  height: auto;
+}
+
+/* İçerik alanı */
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto; /* ortaya hizalı */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+
+/* Sol kısım: linkler ve telefon */
+.footerLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  color: white;
+}
+
+.footerLeft p {
+  margin: 0;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 1px;
+}
+
+.footerLinks a {
+  color: white;
+  text-decoration: none;
+}
+
+.footerLinks a:hover {
+  text-decoration: underline;
+}
+
+/* Ortadaki logo ve isim */
+.footerCenter {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+/* Sağ kısım: yazı ve sosyal medya ikonları */
+.footerRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+  color: white;
+  padding-right: 0; /* padding kaldır */
+  margin-right: 0; /* margin kaldır */
+
+}
+
+.footerRight .footerAbout {
+  font-size: 15px;
+  margin-bottom: 12px;
+
+}
+
+.socialMedia {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-right: 50px;
+  margin-top: 50px;
 }
 
 .socialMedia svg {
+  font-size: 30px;
   color: white;
-  margin: 20px;
-  font-size: 70px;
   cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-.footer p {
+.socialMedia svg:hover {
+  transform: scale(1.1);
+}
+
+/* Tel ve diğer paragraflar */
+.footerLeft p,
+.footerRight p {
   color: white;
+  margin: 0;
+}
+
+/* Copyright alanı */
+.footer .copyright {
+  margin-top: 30px;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+/* Mobil uyum */
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footerLeft,
+  .footerCenter,
+  .footerRight {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .socialMedia {
+    justify-content: center !important;
+  }
 }
