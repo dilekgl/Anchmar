@@ -1,3 +1,6 @@
-# https://www.robotstxt.org/robotstxt.html
+# https://www.anchmarmarine.com robots.txt
+
 User-agent: *
 Disallow:
+
+Sitemap: https://www.anchmarmarine.com/sitemap.xml
