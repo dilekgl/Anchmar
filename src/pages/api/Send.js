@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).json({ message: "Yalnızca POST istekleri desteklenir" });
+    return res.status(405).json({ message: "Sadece POST istekleri desteklenir" });
   }
 
   const { name, surname, number, email, message } = req.body;
@@ -17,15 +17,17 @@ export default async function handler(req, res) {
 
   try {
     await transporter.sendMail({
-      from: `"${name} ${surname}" <${email}>`,
-      to: "info@anchmarmarine.com",
-      subject: "Yeni İletişim Formu Mesajı",
+      from: `"${name} ${surname}" <${process.env.MAIL_USER}>`, // Gönderici: senin e-posta
+      to: "info@anchmarmarine.com",                            // Alıcı: senin şirket mailin
+      replyTo: email,                                          // Yanıtla → kullanıcıya gider
+      subject: "İletişim Formu Mesajı",
       html: `
-        <h3>Yeni Mesaj</h3>
+        <h2>Yeni İletişim Formu Mesajı</h2>
         <p><strong>Ad Soyad:</strong> ${name} ${surname}</p>
         <p><strong>Telefon:</strong> ${number}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Mesaj:</strong><br>${message}</p>
+        <p><strong>Mesaj:</strong></p>
+        <p>${message}</p>
       `,
     });
 
