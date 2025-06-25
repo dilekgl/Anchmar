@@ -12,23 +12,27 @@ const Contact = () => {
 
 const handleSubmit = async (e) => {
   e.preventDefault();
+  try {
+    const res = await fetch("/api/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
 
-  const res = await fetch('/api/send', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      name: form.name,
-      email: form.email,
-      message: form.message,
-    }),
-  });
+    const data = await res.json();
+    alert(data.message);
 
-  const data = await res.json();
-
-  if (data.success) {
-    alert('Mesaj başarıyla gönderildi!');
-  } else {
-    alert('Bir hata oluştu, lütfen tekrar deneyin.');
+    if (res.ok) {
+      setFormData({
+        name: '',
+        surname: '',
+        number: '',
+        email: '',
+        message: ''
+      });
+    }
+  } catch (error) {
+    alert("Sunucuya bağlanılamadı.");
   }
 };
 
