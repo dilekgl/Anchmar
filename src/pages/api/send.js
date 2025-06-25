@@ -10,8 +10,8 @@ export default async function handler(req, res) {
 
   const transporter = nodemailer.createTransport({
     host: "mail.anchmarmarine.com",
-    port: 465,
-    secure: true,
+    port: 587,
+    secure: false,
     auth: {
       user: process.env.MAIL_USER, // info@anchmarmarine.com
       pass: process.env.MAIL_PASS  // e-posta şifresi
