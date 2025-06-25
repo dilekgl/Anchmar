@@ -1,4 +1,3 @@
-// pages/api/send.js
 import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
@@ -10,18 +9,22 @@ export default async function handler(req, res) {
 
   const transporter = nodemailer.createTransport({
     host: "mail.anchmarmarine.com",
-    port: 587,
-    secure: false,
+    port: 587,          // 587 TLS portu (daha yaygın)
+    secure: false,      // TLS için false olmalı
     auth: {
-      user: process.env.MAIL_USER, // info@anchmarmarine.com
-      pass: process.env.MAIL_PASS  // e-posta şifresi
+      user: process.env.MAIL_USER,  // info@anchmarmarine.com
+      pass: process.env.MAIL_PASS,  // e-posta şifren
+    },
+    tls: {
+      rejectUnauthorized: false     // Gerekirse ekle, çoğu durumda faydalı olur
     }
   });
 
   try {
     await transporter.sendMail({
-      from: `"${name} ${surname}" <${email}>`,
-      to: process.env.MAIL_TO || process.env.MAIL_USER, // Kendine gönder
+      from: `"${name} ${surname}" <${process.env.MAIL_USER}>`, // Gönderen kendi domain mailin olmalı
+      replyTo: email,  // Cevaplar kullanıcı mailine gitsin
+      to: process.env.MAIL_TO || process.env.MAIL_USER, // Alıcı mail adresi
       subject: `İletişim Formu - ${name} ${surname}`,
       text: `
 Yeni bir mesaj geldi:
