@@ -9,25 +9,25 @@ export default async function handler(req, res) {
 
   const transporter = nodemailer.createTransport({
     host: "mail.anchmarmarine.com",
-    port: 587,          // 587 TLS portu (daha yaygın)
-    secure: false,      // TLS için false olmalı
+    port: 587,
+    secure: false,
     auth: {
-      user: process.env.MAIL_USER,  // info@anchmarmarine.com
-      pass: process.env.MAIL_PASS,  // e-posta şifren
+      user: process.env.MAIL_USER, // info@anchmarmarine.com
+      pass: process.env.MAIL_PASS  // şifre
     },
     tls: {
-      rejectUnauthorized: false     // Gerekirse ekle, çoğu durumda faydalı olur
+      rejectUnauthorized: false // Gerekirse
     }
   });
 
   try {
     await transporter.sendMail({
-      from: `"${name} ${surname}" <${process.env.MAIL_USER}>`, // Gönderen kendi domain mailin olmalı
-      replyTo: email,  // Cevaplar kullanıcı mailine gitsin
-      to: process.env.MAIL_TO || process.env.MAIL_USER, // Alıcı mail adresi
-      subject: `İletişim Formu - ${name} ${surname}`,
+      from: `"Anchmar Marine İletişim" <${process.env.MAIL_USER}>`,
+      to: process.env.MAIL_TO || process.env.MAIL_USER,
+      replyTo: email,
+      subject: `Yeni İletişim Formu Mesajı - ${name} ${surname}`,
       text: `
-Yeni bir mesaj geldi:
+Yeni bir mesaj aldınız:
 
 Ad: ${name}
 Soyad: ${surname}
