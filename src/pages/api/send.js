@@ -13,7 +13,7 @@ export default async function handler(req, res) {
   try {
     await resend.emails.send({
       from: 'Anchmar Marine <info@anchmarmarine.com>',
-      to: 'seninmail@gmail.com', // veya info@anchmarmarine.com
+      to: 'info@anchmarmarine.com', // veya info@anchmarmarine.com
       reply_to: email,
       subject: `Yeni Mesaj - ${name} ${surname}`,
       text: `
