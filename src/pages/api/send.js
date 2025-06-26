@@ -1,4 +1,7 @@
-import nodemailer from 'nodemailer';
+// pages/api/send.js
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -7,28 +10,13 @@ export default async function handler(req, res) {
 
   const { name, surname, number, email, message } = req.body;
 
-  const transporter = nodemailer.createTransport({
-    host: "mail.anchmarmarine.com",
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.MAIL_USER, // info@anchmarmarine.com
-      pass: process.env.MAIL_PASS  // şifre
-    },
-    tls: {
-      rejectUnauthorized: false // Gerekirse
-    }
-  });
-
   try {
-    await transporter.sendMail({
-      from: `"Anchmar Marine İletişim" <${process.env.MAIL_USER}>`,
-      to: process.env.MAIL_TO || process.env.MAIL_USER,
-      replyTo: email,
-      subject: `Yeni İletişim Formu Mesajı - ${name} ${surname}`,
+    await resend.emails.send({
+      from: 'Anchmar Marine <info@anchmarmarine.com>',
+      to: 'seninmail@gmail.com', // veya info@anchmarmarine.com
+      reply_to: email,
+      subject: `Yeni Mesaj - ${name} ${surname}`,
       text: `
-Yeni bir mesaj aldınız:
-
 Ad: ${name}
 Soyad: ${surname}
 Telefon: ${number}
