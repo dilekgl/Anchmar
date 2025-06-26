@@ -1,4 +1,3 @@
-// pages/api/send.js
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -13,9 +12,9 @@ export default async function handler(req, res) {
   try {
     await resend.emails.send({
       from: 'Anchmar Marine <info@anchmarmarine.com>',
-      to: 'info@anchmarmarine.com', // veya info@anchmarmarine.com
+      to: 'info@anchmarmarine.com',
       reply_to: email,
-      subject: `Yeni Mesaj - ${name} ${surname}`,
+      subject: `Yeni İletişim Mesajı - ${name} ${surname}`,
       text: `
 Ad: ${name}
 Soyad: ${surname}
