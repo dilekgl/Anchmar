@@ -5,36 +5,42 @@
   box-sizing: border-box;
 }
 
+/* Tüm footer içeriğini geniş bırak ve yay */
 .footerContent {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  justify-content: space-between; /* bloklar arası boşluk */
+  align-items: flex-start;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 30px;
 }
 
-/* Her blok aynı genişlikte olacak şekilde ayarlandı */
+/* Bloklar eşit genişlikte olsun */
 .footerLeft,
 .footerCenter,
 .footerRight {
   flex: 1;
-  min-width: 250px;
+  min-width: 220px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   color: white;
 }
 
-/* Başlık stilleri */
+/* SAĞA YAPIŞMAK için */
+.footerRight {
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* Başlıklar */
 .footerLeft h4,
 .footerRight h4 {
-  color: white;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   font-size: 18px;
 }
 
-/* İkon + yazı uyumu */
+/* İkon + yazı hizalama */
 .footerLeft p svg,
 .footerRight p svg {
   vertical-align: middle;
@@ -44,6 +50,7 @@
 .footerLeft p,
 .footerRight p {
   margin: 0;
+  color: white;
 }
 
 .footerLeft a,
@@ -75,10 +82,15 @@
   transform: scale(1.1);
 }
 
-/* Logo ve isim */
+/* Logo */
 .footerLogoContainer {
   text-align: center;
   margin-bottom: 10px;
+}
+
+.footerLogoImage {
+  width: 90px;
+  height: auto;
 }
 
 .footerLogoText {
@@ -88,16 +100,11 @@
   color: white;
 }
 
-.footerLogoImage {
-  width: 90px;
-  height: auto;
-}
-
 /* Linkler */
 .footerLinks {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
 }
 
 .footerLinks a {
@@ -109,7 +116,7 @@
   text-decoration: underline;
 }
 
-/* Telif hakkı */
+/* Copyright */
 .footer .copyright {
   margin-top: 30px;
   font-size: 14px;
@@ -117,7 +124,7 @@
   text-align: center;
 }
 
-/* Mobil uyum */
+/* Mobil görünüm */
 @media (max-width: 768px) {
   .footerContent {
     flex-direction: column;
@@ -128,16 +135,12 @@
   .footerLeft,
   .footerCenter,
   .footerRight {
+    width: 100%;
     align-items: center !important;
     text-align: center !important;
   }
 
   .socialMedia {
     justify-content: center;
-  }
-  .footerRight {
-    align-items: center !important;
-    text-align: left !important;
-    
   }
 }

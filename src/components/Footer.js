@@ -54,7 +54,6 @@ function Footer() {
 
         {/* SAĞ BLOK - Sayfa Linkleri */}
         <div className="footerRight">
-          <h4>Sayfalar</h4>
           <div className="footerLinks">
             <Link to="/">Anasayfa</Link>
             <Link to="/hakkimizda">Hakkımızda</Link>
