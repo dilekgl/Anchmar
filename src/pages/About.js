@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import "../styles/About.css";
-import bakımImage from '../assets/bakım.png'; // Görseli import ettik
+import bakımImage from '../assets/bakim3.png'; // Görseli import ettik
 
 function About() {
   const aboutRef = useRef(null);

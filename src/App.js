@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Footer from "./components/Footer";
 import Contact from './pages/Contact';
 import Services from './pages/Services';
+import WhatsAppButton from "./components/WhatsAppButton";
 import { useState } from 'react';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/iletisim" element={<Contact />} />
           <Route path="/hizmetlerimiz" element={<Services />} />
         </Routes>
+        <WhatsAppButton></WhatsAppButton>
       </div>
       <Footer />
 

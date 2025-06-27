@@ -47,14 +47,14 @@ const Contact = () => {
     <div className="contact">
       <div className="leftSide">
         <h2>Adresimiz</h2>
-        <p>Anchmar Marine<br />Datça<br />Muğla, Türkiye</p>
+        <p>Anchmar Marine<br />Reşadiye Mahallesi, Knidos Sokak No:8/C <br />Datça/Muğla, Türkiye</p>
         <div className="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12090.690241086926!2d27.688000999999996!3d36.7336575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14be249548517575%3A0x120d358f69d57900!2zRGF0w6dhLCDEsHNrZWxlLCA0ODkwMCBEYXTDp2EvTXXEn2xh!5e1!3m2!1str!2str!4v1750328511786!5m2!1str!2str"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.951417072202!2d27.65947161118002!3d36.751970172145214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14be24b747656dc7%3A0xf6e377a7adb88b22!2zUmXFn2FkaXllLCBLbmlkb3MgWW9sdSBObzo4IEQ6YywgNDg5MDAgRGF0w6dhL011xJ9sYQ!5e1!3m2!1str!2str!4v1751040334811!5m2!1str!2str" 
+      
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
 

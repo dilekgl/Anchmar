@@ -35,7 +35,7 @@ const Home = () => {
         <div className="overlay"></div>
 
         <div className="headerContainer">
-          <h1>Anchmar Marine</h1>
+          <h1>ANCHMAR MARINE</h1>
           <p>Yatlarınız İçin En İyisi</p>
         </div>
       </div>

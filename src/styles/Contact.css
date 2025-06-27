@@ -9,11 +9,18 @@
   height: 100%;
   flex: 50%;
   padding-left: 30px;
-  padding-top: 50px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+.leftSide h2{
+  color: #ff914d;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 10;
+  font-size: 50px;
+}
+
 
 .contact .rightSide {
   height: 100%;
@@ -29,6 +36,7 @@
   font-weight: 10;
   font-size: 50px;
   margin-left: 30px;
+  color: #ff914d;
 }
 
 form {
@@ -101,14 +109,14 @@ form button {
 }
 .name-row {
   display: flex;
-  gap: 20px; /* iki input arası boşluk */
-  width: 88%; /* form input genişliği ile uyumlu */
+  gap: 20px; 
+  width: 88%; 
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
-  flex: 1; /* iki input eşit genişlikte */
+  flex: 1; 
 }
 
 .name-row label {

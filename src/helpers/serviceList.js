@@ -1,9 +1,9 @@
 
 import Bakım from '../assets/bakım.png'
 import Bakım1 from '../assets/bakim1.png'
-import Bakım2 from '../assets/bakim2.png'
-import Bakım3 from '../assets/bakim3.png'
-import Bakım4 from '../assets/bakim4.png'
+import Bakım2 from '../assets/photo.jpeg'
+import Bakım3 from '../assets/rapor.jpg'
+import Bakım4 from '../assets/bot.png'
 
 
 export const serviceList = [
@@ -26,9 +26,9 @@ export const serviceList = [
     
   },
    {
-    name: "Tekneye Özel Teknik Danışmanlık & Raporlama",
+    name: "Özel Teknik Danışmanlık & Raporlama",
     image: Bakım3,
-    aciklama: "Her tekne sahibinin ihtiyaçlarına özel teknik danışmanlık hizmeti sunuyoruz. Uzmanlarımız, teknenizin durumu hakkında detaylı raporlar hazırlayarak, bakım ve onarım süreçlerini optimize etmenize yardımcı olur. Bu sayede, yat sahipleri, tekne yönetimlerini daha bilinçli ve etkili bir şekilde gerçekleştirebilirler."
+    aciklama: "Her yat ve tekne sahibinin ihtiyaçlarına özel teknik danışmanlık hizmeti sunuyoruz. Uzmanlarımız, teknenizin durumu hakkında detaylı raporlar hazırlayarak, bakım ve onarım süreçlerini optimize etmenize yardımcı olur. Bu sayede, yat sahipleri, tekne yönetimlerini daha bilinçli ve etkili bir şekilde gerçekleştirmektedir."
     
   },
    {

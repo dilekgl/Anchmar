@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: white;
+  color: #335479;
 }
 
 /* SAĞA YAPIŞMAK için */
@@ -36,6 +36,7 @@
 /* Başlıklar */
 .footerLeft h4,
 .footerRight h4 {
+  color: #ff914d;
   margin-bottom: 8px;
   font-size: 18px;
 }
@@ -50,12 +51,12 @@
 .footerLeft p,
 .footerRight p {
   margin: 0;
-  color: white;
+  color: #335479;
 }
 
 .footerLeft a,
 .footerRight a {
-  color: white;
+  color: #335479;
   text-decoration: none;
 }
 
@@ -63,7 +64,7 @@
 .footerRight a:hover {
   text-decoration: underline;
 }
-
+.footerCenter p {color: #335479;}
 /* Sosyal medya ikonları */
 .socialMedia {
   display: flex;
@@ -73,7 +74,7 @@
 
 .socialMedia svg {
   font-size: 30px;
-  color: white;
+  color: #335479;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -97,18 +98,18 @@
   font-size: 26px;
   font-weight: bold;
   margin-top: 10px;
-  color: white;
+  color: #ff914d;
 }
 
 /* Linkler */
 .footerLinks {
-  display: flex;
+  display: grid;
   flex-direction: column;
   gap: 4px;
 }
 
 .footerLinks a {
-  color: white;
+  color: #335479;
   text-decoration: none;
 }
 

@@ -5,6 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 
 import "../styles/Footer.css";
 import logo from "../assets/logo.png";
@@ -17,7 +18,8 @@ function Footer() {
         
         {/* SOL BLOK - Bize Ulaşın */}
         <div className="footerLeft">
-          <h4>Bize Ulaşın</h4>
+          
+          <h4> <PhoneInTalkIcon style={{ color: "#335479", marginRight: "6px", verticalAlign: "middle" }} />Bize Ulaşın</h4>
           <p>
             <WhatsAppIcon />
             <a
@@ -34,7 +36,7 @@ function Footer() {
           </p>
           <p>
             <LocationOnIcon />
-            Datça / Muğla
+            Reşadiye Mahallesi, Knidos Sokak No:8/C Datça/Muğla
           </p>
 
           <div className="socialMedia">
@@ -49,11 +51,13 @@ function Footer() {
           <div className="footerLogoContainer">
             <img src={logo} alt="Anchmar Marine Logo" className="footerLogoImage" />
             <div className="footerLogoText">Anchmar Marine</div>
+            <p>Yat ve Tekneleriniz için en İyisi</p>
           </div>
         </div>
 
         {/* SAĞ BLOK - Sayfa Linkleri */}
         <div className="footerRight">
+          <h4>Hızlı Erişim</h4>
           <div className="footerLinks">
             <Link to="/">Anasayfa</Link>
             <Link to="/hakkimizda">Hakkımızda</Link>
@@ -65,7 +69,7 @@ function Footer() {
         </div>
       </div>
 
-      <p className="copyright">© 2025 anchmarine.com</p>
+      <p className="copyright">© 2025 anchmarmarine.com</p>
     </div>
   );
 }
