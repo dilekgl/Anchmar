@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <>
       <div className="home">
-        <video autoPlay muted loop className="bg-video">
+        <video autoPlay muted loop playsInline className="bg-video">
           <source src="/home1.mp4" type="video/mp4" />
         </video>
         <div className="overlay"></div>
