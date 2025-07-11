@@ -52,11 +52,12 @@ const Header = () => {
       <div className='leftSide' id={openLinks ? "open" : "close"}>
         <Link to="/"><img src={logo} alt="Logo" /></Link>
         <div className="hiddenLinks">
-          <Link to="/">Anasayfa</Link>
-          <Link to="/hakkimizda">Hakkımızda</Link>
-          <Link to="/hizmetlerimiz">Hizmetlerimiz</Link>
-          <Link to="/iletisim">İletişim</Link>
+          <Link to="/" onClick={() => setOpenLinks(false)}>Anasayfa</Link>
+          <Link to="/hakkimizda" onClick={() => setOpenLinks(false)}>Hakkımızda</Link>
+          <Link to="/hizmetlerimiz" onClick={() => setOpenLinks(false)}>Hizmetlerimiz</Link>
+          <Link to="/iletisim" onClick={() => setOpenLinks(false)}>İletişim</Link>
         </div>
+
       </div>
 
       <div className='rightSide'>
